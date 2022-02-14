@@ -1,11 +1,17 @@
 const express = require('express');
 const app = express();
 const PORT = 3000 || process.env.PORT;
-const connectDb = require('./config/db')
+const connectDb = require('./config/db');
+const bodyParser = require('body-parser');
 
 
 const indexRoutes = require('./routes/index');
-const linkRoutes = require('./routes/links')
+const linkRoutes = require('./routes/links');
+
+
+//set setting bodyParser
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
