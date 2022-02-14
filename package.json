@@ -1,0 +1,22 @@
+{
+  "name": "shorten-links-from-nodejs",
+  "version": "1.0.0",
+  "description": "This is the third project from the Node JS Tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marat-Gumerov74/shorten-links-from-NodeJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marat-Gumerov74/shorten-links-from-NodeJS/issues"
+  },
+  "homepage": "https://github.com/Marat-Gumerov74/shorten-links-from-NodeJS#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
