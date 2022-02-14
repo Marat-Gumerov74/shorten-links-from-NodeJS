@@ -26,8 +26,14 @@ router.post('/short', async (req, res) => {
     
 });
 
-router.get('/:code', (req, res) => {
-    
+router.get('/:code', async (req, res) => {
+    const {code} = req.params;
+
+    const link = await Link.findOne({code});
+    if (link) {
+        return res.redirect(link.source);
+    }
+    return res.status(404).json({status:404, message:`Link not found`})
 });
 
 
