@@ -3,12 +3,12 @@ const app = express();
 const PORT = 3000 || process.env.PORT;
 const connectDb = require('./config/db');
 const bodyParser = require('body-parser');
-
-
+const path = require('path')
+//Routes
 const indexRoutes = require('./routes/index');
 const linkRoutes = require('./routes/links');
 
-
+app.use(express.static(path.join(__dirname, 'public')));
 //set setting bodyParser
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
